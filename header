@@ -1,0 +1,68 @@
+<div class="header">
+  <div  data-spy="affix" data-offset-top="20" class="main navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <div class="brand-alt"> <a href="index.html" class="logo"><img src="assets/img/site/home.jpg" width="150" height ="100" alt="Electronics Club" ></a> </div>
+        <div class="brand"> <a href="index.html" class="logo"><img src="assets/img/site/home.jpg"  width="150" height ="100" alt="Electroncis Club" ></a>
+        </div>
+        <div class="navbar-wrap pull-right">
+          <ul class="nav">
+            <li class="dropdown "  > <a href="aboutus" class="dropdown-toggle disable" data-hover="dropdown" data-target="#">About Us</a>
+            </li>
+            <li class="dropdown "> <a class="dropdown-toggle disable" data-hover="dropdown" data-target="#">Events</a>
+              <ul class="dropdown-menu mega-menu" style="width:727px;">
+                <li class="pull-left menu-divider" style="height:300px;"><a>Something</a>
+                  <ul class="pull-left">
+                    <li><a>Servers</a></li>
+                  </ul>
+                  <ul class="pull-left">
+                   <li><a>DNS</a></li>
+                  </ul>
+                </li>
+                <li class="pull-left menu-divider" style="height:300px;"> <a href="cloud-platform.1">Cloud Platform</a>
+                  <ul>
+                    <li><a>Cloud Management</a></li>
+                    </ul>
+                </li>
+                <li class="pull-left"> <a href="products/support/options">Support</a>
+                  <ul>
+                    <li><a>Service Tasks</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown "  > <a class="dropdown-toggle disable" data-hover="dropdown" data-target="#">Resources</a>
+              <ul class="dropdown-menu">
+                <li ><a href="documentations">Documentations</a></li>
+               </ul>
+            </li>
+            <li class="dropdown"  > <a class="dropdown-toggle disable" data-hover="dropdown" data-target="#" href="initiatives">Club Initiatives</a>
+              <ul class="dropdown-menu">
+                <li ><a href="initiatives#tnt">Think N Tinker</a></li>
+                <li ><a href="initiatives#tyr">Techify Your Room</a></li>
+                <li ><a href="initiatives#hh">Hardware Hackathon</a></li>
+               </ul>
+            </li>
+            <li class="dropdown "  > <a href="blog.php" class="dropdown-toggle disable" data-hover="dropdown" data-target="#">Blog</a>
+              <ul class="dropdown-menu">
+                <li ><a href="login.php">Sign In/Up</a></li>
+                <li ><a href="bloglogout.php">Logout</a></li>
+                <li ><a href="blogsettings.php">Settings</a></li>
+               </ul>
+            </li>
+            <li class="dropdown "  > <a href="hardware" class="dropdown-toggle disable" data-hover="dropdown" data-target="#" href="solutions.1">Hardware</a>
+              <ul class="dropdown-menu">
+                <li ><a href="hardware#Rfmodule">RF Module</a></li>
+                <li ><a href="hardware#Motordriver">Motor Driver</a></li>
+               </ul>
+            </li>
+            <li class="dropdown "  > <a href="teamelecclub" class="dropdown-toggle disable" data-hover="dropdown" data-target="#">Team</a>
+            </li>
+            <li class="dropdown "  > <a href="contactelecclub" class="dropdown-toggle disable" data-hover="dropdown" data-target="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<?php
+	session_start();
+	$_SESSION['id']='';
+	$_SESSION['pwd']='';
+	$_SESSION['loggedin']=false;
+?>
+<script>
+window.location.assign("index.html");
+</script>
