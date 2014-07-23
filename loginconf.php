@@ -16,6 +16,7 @@ window.location.assign('login.php?x=1');
 }
 else
 {
+	$_SESSION['UserName'] = mysqli_fetch_array(mysqli_query($con,"SELECT Username FROM Authenticate WHERE Email='$id'"))[0];
 	$_SESSION['loggedin'] = true;
 ?>
 <script>

@@ -1,16 +1,3 @@
-<?php
-session_start();
-if($_SESSION['loggedin']){
-?>
-<script>
-	window.location.assign('blog.php');
-</script>
-<?php
-}
-else 
-{
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,18 +58,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     });
   </script>
 
-<div style="margin-left:40%;">
+<div style="margin-left:30%;">
 <div class="row">
   <div class="span12">
-    <h1>Sign In</h1>
-<p class="lead">Use your existing account to access the Blog!</p>
-<p class="lead" style="color:red;">
+    <h1>Confirm your account</h1>
+<p class="lead">Enter the code received in your email!</p>
 <?php
-if($_GET['x'] == 1){
-	echo 'Email and passwords do not match! Try again!';
-}
+  if($_GET['x'] == 1)
+      echo '<p class="lead" style="color:red;">Email and code do not match! Try again!</p>';
 ?>
-</p>
   </div>
 </div>
 
@@ -90,63 +74,12 @@ if($_GET['x'] == 1){
 <div class="row" style="width:20%;">
   <div class="span8">
 
-<form method="post" action="loginconf.php">
-<input name="id" type="email" style="border-radius: 5px;" placeholder="Email" required autofocus type="text"><br>
-<input type="password" name="pwd" style="border-radius: 5px;" placeholder="Password" required><br>
+<form method="post" action="authcodeverify.php">
+<input name="signupemailverify" type="email" style="border-radius: 5px;" placeholder="Email" required autofocus type="text"><br>
+<input type="text" name="signupcodeverify" style="border-radius: 5px;" placeholder="Authentication Code" required><br>
 <input type="submit" style="border-radius: 5px;">
 </form>
   </div>
-</div>
-<br>
-<div class="row">
-  <div class="span12">
-    <h1>OR</h1>
-  </div>
-</div>
-<br>
-<div class="row">
-  <div class="span12">
-    <h1>Sign Up</h1>
-<p class="lead">Please register here!</p>
-<?php
-  if($_GET['x'] == 3){
-    echo '<p class="lead" style="color:red;">Email already in use!</p>';
-  }
-?>
-  </div>
-</div>
-
-
-<div class="row" style="width:20%;">
-  <div class="span8">
-
-<form method="post" action="adduser.php">
-<input name="signupname" type="text" style="border-radius: 5px;" placeholder="Name" required autofocus type="text"><br>
-<input type="email" name="signupemailaddr" style="border-radius: 5px;" placeholder="Email" required><br>
-<input onkeyup="passwordLength()" type="password" id="pwd" name="signuppwd" style="border-radius: 5px;" placeholder="Choose a password" required>
-<span id="lengthcheck"></span>
-<br>
-<input onkeyup="checkPasswords()" id="confpwd" type="password" name="signupconfpwd" style="border-radius: 5px;" placeholder="Confirm password" required>
-<span id="passwordcheck"></span>
-<br>
-<input name="captcha" type="text" required placeholder="Enter what you see!">
-<img src="captcha.php" />
-<?php
-  if($_GET['x'] == 2){
-    ?>
-    <span style="color:red;">Wrong captcha entered!</span>
-    <script>
-    document.getElementsByName('signupname')[0].value = "<?php echo $_GET['name']; ?>";
-    document.getElementsByName('signupemailaddr')[0].value = "<?php echo $_GET['email']; ?>";
-    </script>
-<?php
-  }
-?>
-<br>
-<input type="submit" style="border-radius: 5px;" id="submitbtn">
-</form>
-  </div>
-</div>
 </div>
 
 <script src="assets/js/jquery.validate.min.js"></script> 
@@ -183,36 +116,7 @@ $('[data-spy="scroll"]').each(function () {
   var $spy = $(this).scrollspy('refresh')
 });
 </script>
-<script>
-function checkPasswords(){
-	var x = document.getElementById('pwd').value;
-	var y = document.getElementById('confpwd').value;
-	if(x!=y && y!=''){
-		document.getElementById('passwordcheck').innerHTML = "Passwords not same!";
-		document.getElementById('passwordcheck').style.color="red";
-    document.getElementById("submitbtn").disabled = true;
-	}
-	else {
-		document.getElementById('passwordcheck').innerHTML = "";
-    document.getElementById("submitbtn").disabled = false;
-	}
-	passwordLength();
-}
 
-function passwordLength(){
-	var x = document.getElementById('pwd').value;
-	if(x.length<8){
-		document.getElementById('lengthcheck').innerHTML = "8 characters or more";
-		document.getElementById('lengthcheck').style.color="red";
-    document.getElementById("submitbtn").disabled = true;
-	}
-	else {
-		document.getElementById('lengthcheck').innerHTML = "";
-    document.getElementById("submitbtn").disabled = false;
-	}
-	checkPasswords();
-}
-</script>
 <script src="assets/js/froogaloop2.min.js"></script>
 <script src="assets/js/jquery.offsets.js"></script>
 <script src="assets/js/modalVideo.js"></script>
@@ -243,4 +147,3 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 
 </body>
 </html>
-<?php } ?>

@@ -67,7 +67,11 @@ print file_get_contents("header");
 	    <div class="row">
 
           <div class="span12">
-          <h1>Welcome to Electronics Club's Blog!</h1>
+          <h1>Welcome
+          <?php
+            echo $_SESSION['UserName'];
+          ?>!
+          </h1>
           </div>
         </div>
 				<div class="row">

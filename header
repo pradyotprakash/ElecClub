@@ -46,8 +46,8 @@
             <li class="dropdown "  > <a href="blog.php" class="dropdown-toggle disable" data-hover="dropdown" data-target="#">Blog</a>
               <ul class="dropdown-menu">
                 <li ><a href="login.php">Sign In/Up</a></li>
-                <li ><a href="bloglogout.php">Logout</a></li>
                 <li ><a href="blogsettings.php">Settings</a></li>
+                <li ><a href="bloglogout.php">Logout</a></li>
                </ul>
             </li>
             <li class="dropdown "  > <a href="hardware" class="dropdown-toggle disable" data-hover="dropdown" data-target="#" href="solutions.1">Hardware</a>

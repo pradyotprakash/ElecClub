@@ -18,7 +18,7 @@ window.location.assign('login.php');
 else
 {
 	$topicname = $_POST['topicname'];
-	$table = sha1($topicname);
+	$table = 't'.substr(sha1($topicname),0,10);
 	$db = "INSERT INTO Topics VALUES ('$topicname','$table')";
 	mysqli_query($con,$db);
 	$db = "CREATE TABLE ".$table." (Author text, Data text, Time text)";
